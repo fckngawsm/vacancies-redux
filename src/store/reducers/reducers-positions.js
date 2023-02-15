@@ -1,4 +1,4 @@
-import { ADD_POSTIONS } from "store/constants/constants-positions";
+import { ADD_POSTIONS } from "../constants/constants-positions";
 
 export const positionReducer = (state = [], action) => {
   switch (action.type) {

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { FilterPanel } from 'components/FilterPanel';
-import { JobList } from 'components/JobList';
-import { TheHeader } from 'components/TheHeader';
-import { addPositions } from 'store/actions/actions-positions';
-import data from '../mock/data'
+import { FilterPanel } from '../components/FilterPanel';
+import { JobList } from '../components/JobList';
+import { TheHeader } from '../components/TheHeader';
+import { addPositions } from '../store/actions/actions-positions';
+import data from '../mock/data.json'
 
 function App() {
   const dispatch = useDispatch();

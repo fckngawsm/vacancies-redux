@@ -1,4 +1,4 @@
-import { ADD_POSTIONS } from "store/constants/constants-positions";
+import { ADD_POSTIONS } from "../constants/constants-positions";
 
 export const addPositions = (positions) => ({
     type:ADD_POSTIONS,

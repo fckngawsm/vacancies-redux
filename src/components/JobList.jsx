@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import { selectAllPositions } from 'store/selectors/selectors-positions';
-import { JobPosition } from './JobPosition';
+import { selectAllPositions } from '../store/selectors/selectors-positions';
+import { JobPosition } from '../components/JobPosition';
 
 const JobList = () => {
   const positions = useSelector(selectAllPositions);
