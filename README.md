@@ -6,6 +6,7 @@
 
 - React
 - Redux
+- PropTypes
 - CSS
 
 ### Рекомендации
