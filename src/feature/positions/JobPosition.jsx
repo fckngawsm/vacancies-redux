@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { Badge } from '../UI/Badge';
-import { Card } from '../UI/Card';
-import { Stack } from '../UI/Stack';
+import { Badge } from '../../UI/Badge';
+import { Card } from '../../UI/Card';
+import { Stack } from '../../UI/Stack';
 
 const JobPosition = ({
   id,
@@ -17,10 +17,10 @@ const JobPosition = ({
   location,
   languages,
   tools,
-  handleAddFilter
+  handleAddFilter,
 }) => {
   const badges = [].concat(role, level, ...languages, ...tools);
-
+  console.log(badges)
   return (
     <Card isFeatured={featured}>
       <div className='job-position'>
@@ -66,7 +66,10 @@ const JobPosition = ({
         </div>
         <Stack>
           {badges.map(item => (
-            <Badge onClick={() => handleAddFilter(item)} key={item}>{item}</Badge>
+            <Badge
+              key={item}
+              onClick={() => handleAddFilter(item)}
+            >{item}</Badge>
           ))}
         </Stack>
       </div>
@@ -75,6 +78,7 @@ const JobPosition = ({
 }
 
 export {JobPosition};
+
 
 JobPosition.propTypes = {
   id: PropTypes.number,

@@ -11,21 +11,21 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import { positionReducer } from "./reducers/reducers-positions";
-import { filterReducer } from "../store/reducers/reducers-filter";
 import { configureStore } from "@reduxjs/toolkit";
+import { filterReducer } from "./feature/filter/slice-filter";
+import { positionsReducer } from "./feature/positions/slice-positions";
 
 const persistConfig = {
   key: "root",
   storage,
 };
-const persistedReducer = persistReducer(
-  persistConfig,
-  combineReducers({
-    positions: positionReducer,
-    filter: filterReducer,
-  })
-);
+
+const rootReducer = combineReducers({
+  positions: positionsReducer,
+  filter: filterReducer,
+});
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
